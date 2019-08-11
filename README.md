@@ -1,7 +1,8 @@
-####You can find  [demo](https://mxp-toast.firebaseapp.com/) here
+#### You can find  [demo](https://mxp-toast.firebaseapp.com/) here
 
-#ABOUT PROJECT
-###Project Definition
+# ABOUT PROJECT
+
+### Project Definition
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). This Project is using following tech stacks:
 * [ReactJS](https://reactjs.org/)
 * [material-ui](https://material-ui.com) as CSS framework
