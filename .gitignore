@@ -25,3 +25,10 @@ yarn-error.log*
 #IDE generated file
 .idea/
 
+#deployment-data
+.firebase/
+.firebaserc
+firebase-deploy/
+firebase.json
+
+
