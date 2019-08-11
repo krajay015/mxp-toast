@@ -1,26 +1,42 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Provider } from 'react-redux';
+import { Card, Container, Typography } from '@material-ui/core';
+import MyApp from './Container';
+import ToastButton from './components/ToastButton';
+import store from './reducer';
 
-function App() {
+const styles = {
+  paper: {
+    background: 'linear-gradient(#8497ee , #764ba2)',
+    height: '100vh',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  card: {
+    height: 200,
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'space-evenly'
+  }
+};
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <MyApp>
+        <Container maxWidth="sm">
+          <Typography component="div" style={{ ...styles.paper }}>
+            <Card style={styles.card}>
+              <ToastButton text="Toast with timeout" type="autoHide" />
+              <ToastButton text="Toast with close button" type="closeMethod" />
+            </Card>
+          </Typography>
+        </Container>
+      </MyApp>
+    </Provider>
   );
-}
+};
 
 export default App;
